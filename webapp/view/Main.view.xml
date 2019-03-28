@@ -1,0 +1,36 @@
+<mvc:View controllerName="alex.test.DialogTricks.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Dialog Tricks">
+					<content>
+						<Panel>
+							<headerToolbar>
+								<Toolbar>
+									<Title text="Contact Details"/>
+									<ToolbarSpacer/>
+									<Button icon="sap-icon://edit" press="onEditContact" tooltip="Edit Contact Details"/>
+								</Toolbar>
+							</headerToolbar>
+							<f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+								<f:content>
+									<Label text="Name"/>
+									<Text text="{contactModel>/Name}"/>
+									<Label text="Address"/>
+									<Text text="{contactModel>/Address}"/>
+									<Label text="City"/>
+									<Text text="{contactModel>/City}"/>
+									<Label text="ZIP Code"/>
+									<Text text="{contactModel>/ZIP}"/>
+									<Label text="Country"/>
+									<Text text="{contactModel>/Country}"/>
+								</f:content>
+							</f:SimpleForm>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
